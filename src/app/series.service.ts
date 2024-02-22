@@ -15,7 +15,6 @@ export class SeriesService {
     { "_id": "63741002e2c75d8744f80a55", "id": 7, "title": "Peaky Blinders", "creator": "Steven Knight", "rating": 8.8, "dates": "2013-", "image": "https://es.web.img3.acsta.net/pictures/18/11/24/02/21/0536396.jpg", "channel": "BBC" },
     { "_id": "63741002e2c75d8744f80a56", "id": 8, "title": "Vikings", "creator": "Michael Hirst", "rating": 8.5, "dates": "2013-2020", "image": "https://m.media-amazon.com/images/I/71K8PxDUOsL._AC_SY741_.jpg", "channel": "Prime Video" },
     { "_id": "63741002e2c75d8744f80a57", "id": 9, "title": "The Walking Dead", "creator": "Frank Darabont, Angela Kang", "rating": 8.2, "dates": "2010-2022", "image": "https://m.media-amazon.com/images/I/61EEBfj+THL._AC_SY741_.jpg", "channel": "AMC" },
-
     { "_id": "63741002e2c75d8744f80a58", "id": 6, "title": "WandaVision", "creator": "Jac Schaeffer", "rating": 8, "dates": "2021", "image": "https://static.wikia.nocookie.net/disney/images/5/5e/WandaVision_official_teaster_poster.png", "channel": "Disney +" }
   ];
 

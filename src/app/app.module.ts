@@ -8,6 +8,7 @@ import { SerieCardComponent } from './components/serie-card/serie-card.component
 import { SerieViewComponent } from './components/serie-view/serie-view.component';
 import { SerieListComponent } from './components/serie-list/serie-list.component';
 import { CreateSerieComponent } from './components/create-serie/create-serie.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { CreateSerieComponent } from './components/create-serie/create-serie.com
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule, 
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
