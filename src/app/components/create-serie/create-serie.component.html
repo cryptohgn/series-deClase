@@ -1,0 +1,29 @@
+<!--- 
+    1 - Importo ReactiveFormsModule.
+    2 - Creo el formulario
+    3- Creo el modelo FormGroup
+    4 - Union del modelo con la plantilla
+     formControlName="nombre">
+    5- Validadores
+    6- css
+    # Si el campo tiene estado válido y además el usuario ya lo ha "visitado" se marca con un borde verde
+input.ng-valid.ng-touched {
+	border: 1px solid green;
+}
+
+# Si el campo tiene estado inválido y además el usuario ya lo ha "visitado" se marca con un borde rojo
+input.ng-invalid.ng-touched {
+	border: 1px solid red;
+}   
+    7. CheckError con el *ngIf
+    // Devuelve TRUE si el campo que estamos comprobando tiene el error que pasamos como segundo parámetro y además ha sido visitado
+checkError(field: string, validator: string): boolean {
+	return this.formulario.get(field)?.hasError(validator) && this.formulario.get(field)?.touched;
+}
+    8 Funcinalidad onSubmit
+    	onSubmit(){
+		console.log(this.Variable con todo lo del form.value);
+        LO guardo en una variable
+    9 Llamo a createNew(Le paso la serie), y la ñada al Array
+	}
+-->

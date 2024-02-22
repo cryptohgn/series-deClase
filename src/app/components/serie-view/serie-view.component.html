@@ -1,0 +1,7 @@
+<div *ngIf="serie">
+    <h1>{{serie.title}}</h1>
+    <p>Creador: {{serie.creator}}</p>
+    <img [src]="serie.image" [alt]="serie.title">
+</div>
+
+<p *ngIf="!serie">no EXISTE LA SERIE</p>

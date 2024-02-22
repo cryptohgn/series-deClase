@@ -1,0 +1,6 @@
+<div class="container">
+    <h2>Mi listado de series</h2>
+    <ul>
+        <li *ngFor="let serie of series"><a [routerLink]="['/series', serie.id]">{{serie.title}}</a></li>
+    </ul>
+</div>
