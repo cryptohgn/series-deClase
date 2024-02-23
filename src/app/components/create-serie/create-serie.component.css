@@ -1,0 +1,15 @@
+//Si el campo tiene estado válido y además el usuario ya lo ha "visitado" se marca con un borde verde
+input.ng-valid.ng-touched {
+	border: 1px solid blue;
+}
+
+//Si el campo tiene estado inválido y además el usuario ya lo ha "visitado" se marca con un borde rojo
+input.ng-invalid.ng-touched {
+	border: 1px solid red;
+}
+
+.error {
+	color: red;
+	font-size: 0.8em;
+	marging: 10px 0;
+}

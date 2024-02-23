@@ -1,35 +1,77 @@
-<div class="container my-5">
-    <form [formGroup]="formSerie" (ngSubmit)="onSubmit()">
-        <div class="mb-3">
-            <label class="form-label">Title</label>
-            <input type="text" class="form-control" formControlName="title">
-        </div>
-        <div class="mb-3">
-            <label class="form-label">Creator</label>
-            <input type="text" class="form-control" formControlName="creator">
-        </div>
-        <div class="mb-3">
-            <label class="form-label">Rating:</label>
-            <input type="number" class="form-control" formControlName="rating">
-        </div>
-        <div class="mb-3">
-            <label class="form-label">Dates</label>
-            <input type="string" class="form-control" formControlName="dates">
-        </div>
-        <div class="mb-3">
-            <label class="form-label">Image</label>
-            <input type="string" class="form-control" formControlName="image">
-        </div>
-        <div class="mb-3">
-            <label class="form-label">Channel</label>
-            <input type="string" class="form-control" formControlName="channel">
-        </div>
-        <div class="mb-3">
-            <label class="form-label">id</label>
-            <input type="number" class="form-control" formControlName="id">
-        </div>
-        <input type="submit" value="Enviar" class="btn btn-info">
-    </form>
+    <div class="container my-5">
+        <section class="row-cols-2">
+        <form [formGroup]="formSerie" (ngSubmit)="onSubmit()">
+            <div class="mb-3">
+                <label class="form-label">Title</label>
+                <input type="text" class="form-control" formControlName="title">
+                <p class="error" *ngIf="checkError('title', 'required')">
+                    The field "title" is required
+                </p>
+                <p class="error" *ngIf="checkError('title', 'minLength')">
+                    The field "title" needs at least two characters
+                </p>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Creator</label>
+                <input type="text" class="form-control" formControlName="creator">
+                <p class="error" *ngIf="checkError('creator', 'required')">
+                    The field "creator" is required
+                </p>
+                <p class="error" *ngIf="checkError('creator', 'required')">
+                    The field "creator" needs at least two characters
+                </p>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Rating:</label>
+                <input type="number" class="form-control" formControlName="rating">
+                <p class="error" *ngIf="checkError('rating', 'required')">
+                    The field "rating" is required
+                </p>
+                <p class="error" *ngIf="checkError('rating', 'min')">
+                    The field "rating" needs a number bigger than 1
+                </p>
+                <p class="error" *ngIf="checkError('rating', 'max')">
+                    The field "rating" need a number less than 9
+                </p>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Dates</label>
+                <input type="string" class="form-control" formControlName="dates">
+                <p class="error" *ngIf="checkError('dates', 'required')">
+                    The field "dates" is required
+                </p>
+                <p class="error" *ngIf="checkError('dates', 'min')">
+                    The field "dates" needs a number bigger than 1965
+                </p>
+                <p class="error" *ngIf="checkError('dates', 'max')">
+                    The field "dates" need a number less than 2024
+                </p>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Image</label>
+                <input type="string" class="form-control" formControlName="image">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Channel</label>
+                <select class="form-select" [formControl]="selectedChannel">
+                    <option value="">Select Channel</option>
+                    <option value="Netflix">Netflix</option>
+                    <option value="AMC">AMC</option>
+                    <option value="Prime Video">Prime Video</option>
+                    <option value="HBO">HBO</option>
+                    <option value="BBC">BBC</option>
+                </select>
+            </div>
+            <input type="submit" value="Enviar" class="btn btn-info">
+        </form>
+    </section>
+    <section class="row-cols-2">
+    <div *ngIf="newSerie">
+        <h1>{{newSerie.title}}</h1>
+        <p>Creador: {{newSerie.creator}}</p>
+        <img [src]="newSerie.image" [alt]="newSerie.title">
+    </div>
+    </section>
 </div>
 
 
